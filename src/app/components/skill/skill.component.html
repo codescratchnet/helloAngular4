@@ -1,0 +1,15 @@
+<h2>Skill</h2>
+
+<form (submit)="addSkill(skill.value)">
+    <div>
+        <label for="skill">Skill :</label>
+        <input type="text" id="tbxSkill" #skill placeholder="Add your skill" />
+    </div>
+</form>
+
+<ul>
+    <li style=" list-style-type: none " *ngFor="let skill of skills; let i=index;">
+        {{i+1}} {{skill}}
+        <button (click)="removeSkill(i)">X</button>
+    </li>
+</ul>
